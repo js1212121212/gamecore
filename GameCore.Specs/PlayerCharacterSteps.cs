@@ -44,8 +44,8 @@ namespace GameCore.Specs {
 
         [Given(@"I have the following attributes")]
         public void GivenIHaveTheFollowingAttributes(Table table) {
-            var race = table.Rows.First(row => row["Attribute"] == "Race")["value"];
-            var resistance = table.Rows.First(row => row["Attribute"] == "Resistance")["value"];
+            var race = table.Rows.First(row => row["attribute"] == "Race")["value"];
+            var resistance = table.Rows.First(row => row["attribute"] == "Resistance")["value"];
 
             _player.Race = race;
             _player.DamageResistance = int.Parse(resistance);        
