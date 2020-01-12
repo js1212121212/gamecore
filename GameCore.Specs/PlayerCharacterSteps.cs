@@ -51,7 +51,16 @@ namespace GameCore.Specs {
             _player.DamageResistance = int.Parse(resistance);        
         }
 
+        [Given(@"my character is set to (.*)")]
+        public void GivenMyCharacterIsSetToHealer(CharacterClass characterClass) {
+            _player.CharacterClass = characterClass;
 
+        }
+
+        [When(@"cast a healing spell")]
+        public void WhenCaseAHealingSpell() {
+            _player.CastHealingSpell();
+        }
 
 
 
