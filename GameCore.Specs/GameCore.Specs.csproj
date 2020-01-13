@@ -133,6 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomConversions.cs" />
     <Compile Include="PlayerAttributes.cs" />
     <Compile Include="PlayerCharacterSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

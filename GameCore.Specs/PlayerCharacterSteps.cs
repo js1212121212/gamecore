@@ -87,6 +87,7 @@ namespace GameCore.Specs {
             //_player.MagicalItems.AddRange(items);
 
             //dynamic equivalent
+            //use dynamic set to get dynamic objects then loop through 
             IEnumerable<dynamic> items = table.CreateDynamicSet();
             foreach (var magicalItem in items) {
                 _player.MagicalItems.Add(new MagicalItem {
@@ -103,7 +104,17 @@ namespace GameCore.Specs {
             Assert.Equal(expectedPower, _player.MagicalPower);
         }
 
+        [Given(@"I last slept (.* days ago)")]
+        //capturing the entire phrase of '3 days ago'
+        public void GivenILastSleptDaysAgo(DateTime lastSlept) {
+            _player.LastSleepTime = lastSlept;
+        }
 
+        [When(@"I read a restore health scroll")]
+        public void WhenIReadARestoreHealthScroll() {
+            _player.ReadHealthScroll();
+            
+        }
 
     }
 }
