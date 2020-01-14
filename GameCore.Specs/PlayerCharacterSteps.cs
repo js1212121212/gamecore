@@ -105,15 +105,24 @@ namespace GameCore.Specs {
         }
 
         [Given(@"I last slept (.* days ago)")]
-        //capturing the entire phrase of '3 days ago'
+        //capturing the entire phrase of '3 days ago' and conversion class will convert it to DateTime
         public void GivenILastSleptDaysAgo(DateTime lastSlept) {
             _player.LastSleepTime = lastSlept;
         }
 
         [When(@"I read a restore health scroll")]
         public void WhenIReadARestoreHealthScroll() {
-            _player.ReadHealthScroll();
-            
+            _player.ReadHealthScroll();            
+        }
+
+        [Given(@"I have the following weapons")]
+        public void GivenIHaveTheFollowingWeapons(IEnumerable<Weapon> weapons) {
+            _player.Weapons.AddRange(weapons);
+        }
+
+        [Then(@"My weapons should be worth (.*)")]
+        public void ThenMyWeaponsShouldBeWorth(int value) {
+            Assert.Equal(value, _player.WeaponsValue);
         }
 
     }
