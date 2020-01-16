@@ -133,9 +133,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonPlayerCharacterSteps.cs" />
     <Compile Include="CustomConversions.cs" />
     <Compile Include="PlayerAttributes.cs" />
     <Compile Include="PlayerCharacterSteps.cs" />
+    <Compile Include="PlayerCharacterStepsContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
