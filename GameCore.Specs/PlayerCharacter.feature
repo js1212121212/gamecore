@@ -21,12 +21,14 @@ Scenario: Taking too much damage results in player death
 	When I take 100 damage
 	Then I should be dead
 
+@elf
 Scenario: Elf race characters get additional 20 damage resistance
 		And I have a damage resistance of 10
 		And I'm an Elf
 	When I take 40 damage
 	Then My health should now be 90
 
+@elf
 Scenario: Elf race characters get additional 20 damage resistance using data table
 		And I have the following attributes
 		| attribute  | value |
@@ -63,6 +65,7 @@ Scenario: Weapons are worth money
 	| Knife | 10    |
 	Then My weapons should be worth 100
 
+@elf @ignore
 Scenario: Elf race characters don't lose magical item power
 	Given I'm an Elf
 		And I have an Amulet with a power of 200
