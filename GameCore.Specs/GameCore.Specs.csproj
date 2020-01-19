@@ -133,6 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AwaitingReviewSteps.cs" />
     <Compile Include="CommonPlayerCharacterSteps.cs" />
     <Compile Include="CustomConversions.cs" />
     <Compile Include="PlayerAttributes.cs" />
@@ -142,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="InGameChat.feature" />
     <None Include="packages.config" />
     <None Include="PlayerCharacter.feature" />
   </ItemGroup>
