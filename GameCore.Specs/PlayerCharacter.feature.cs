@@ -481,15 +481,12 @@ this.FeatureBackground();
         [Xunit.TraitAttribute("FeatureTitle", "PlayerCharacter")]
         [Xunit.TraitAttribute("Description", "Elf race characters don\'t lose magical item power")]
         [Xunit.TraitAttribute("Category", "elf")]
-        [Xunit.TraitAttribute("Category", "ignore")]
         public virtual void ElfRaceCharactersDontLoseMagicalItemPower()
         {
             string[] tagsOfScenario = new string[] {
-                    "elf",
-                    "ignore"};
+                    "elf"};
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Elf race characters don\'t lose magical item power", null, new string[] {
-                        "elf",
-                        "ignore"});
+                        "elf"});
 #line 69
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
